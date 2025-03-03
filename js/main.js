@@ -86,4 +86,96 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
+    
+    // Popup System Implementation
+    
+    // Function to open popup
+    function openPopup(popupId) {
+        const popup = document.getElementById(popupId);
+        if (popup) {
+            document.body.classList.add('popup-open');
+            popup.classList.add('active');
+            
+            // Focus trap for accessibility
+            popup.setAttribute('tabindex', '-1');
+            popup.focus();
+        }
+    }
+    
+    // Function to close popup
+    function closePopup(popup) {
+        document.body.classList.remove('popup-open');
+        popup.classList.remove('active');
+    }
+    
+    // Close popup when clicking the close button
+    document.querySelectorAll('.popup-close').forEach(closeButton => {
+        closeButton.addEventListener('click', function() {
+            const popup = this.closest('.popup-overlay');
+            closePopup(popup);
+        });
+    });
+    
+    // Close popup when clicking outside the content
+    document.querySelectorAll('.popup-overlay').forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup(this);
+            }
+        });
+    });
+    
+    // Close popup when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const activePopup = document.querySelector('.popup-overlay.active');
+            if (activePopup) {
+                closePopup(activePopup);
+            }
+        }
+    });
+    
+    // Setup popup triggers for footer links
+    const popupLinks = {
+        // Services column
+        'For Clients': 'clients-popup',
+        'For Providers': 'providers-popup',
+        'Escrow Options': 'escrow-options-popup',
+        
+        // Company column
+        'About Us': 'about-us-popup',
+        'Privacy Policy': 'privacy-policy-popup',
+        'Terms of Service': 'terms-of-service-popup',
+        
+        // Support column
+        'Contact': 'contact-popup',
+        'FAQ': 'faq-popup',
+        'Dispute Resolution': 'dispute-resolution-popup',
+        
+        // Additional links
+        'Company': 'company-popup'
+    };
+    
+    // Attach event listeners to all footer links
+    document.querySelectorAll('.footer-column a').forEach(link => {
+        const linkText = link.textContent.trim();
+        const popupId = popupLinks[linkText];
+        
+        if (popupId) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                openPopup(popupId);
+            });
+        }
+    });
+    
+    // Update "Apply for Verified Access" button to open in new tab
+    const applyButtons = document.querySelectorAll('.btn-primary');
+    applyButtons.forEach(button => {
+        if (button.textContent.includes('Apply for Verified Access')) {
+            button.setAttribute('href', 'https://t.me/+u1Xns6Laf_swYTI1');
+            button.setAttribute('target', '_blank');
+            button.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
 });
