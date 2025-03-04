@@ -138,14 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Setup popup triggers for footer links
     const popupLinks = {
         // Services column
-        'For Clients': 'clients-popup',
-        'For Providers': 'providers-popup',
-        'Escrow Options': 'escrow-options-popup',
+        'Clients': 'clients-popup',
+        'Providers': 'providers-popup',
+        'Escrow Solutions': 'escrow-options-popup',
         
         // Company column
         'About Us': 'about-us-popup',
-        'Privacy Policy': 'privacy-policy-popup',
-        'Terms of Service': 'terms-of-service-popup',
+        'Privacy': 'privacy-policy-popup',
+        'Terms': 'terms-of-service-popup',
         
         // Support column
         'Contact': 'contact-popup',
