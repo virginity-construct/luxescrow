@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D675"/>
+      <stop offset="60%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA8C2C"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Minimalist Shield Icon -->
+  <g transform="translate(25, 30)">
+    <path d="M0,-15 C10,-15 15,-10 15,0 C15,10 10,15 0,15 C-10,15 -15,10 -15,0 C-15,-10 -10,-15 0,-15 Z" 
+          fill="none" 
+          stroke="url(#goldGradient)" 
+          stroke-width="1.5"
+          filter="url(#softGlow)"/>
+    <path d="M-5,-5 L5,-5 L5,5 L-5,5 Z" 
+          fill="url(#goldGradient)" 
+          opacity="0.7"/>
+  </g>
+  
+  <!-- Text with elegant spacing -->
+  <g transform="translate(50, 0)">
+    <!-- LUXE in gold with serif font -->
+    <text x="0" y="35" 
+          font-family="'Playfair Display', serif" 
+          font-size="22" 
+          font-weight="600" 
+          letter-spacing="3"
+          fill="url(#goldGradient)">LUXE</text>
+    
+    <!-- Thin separator line -->
+    <line x1="85" y1="22" x2="85" y2="38" 
+          stroke="url(#goldGradient)" 
+          stroke-width="0.75"/>
+    
+    <!-- ESCROW in white with sans-serif font -->
+    <text x="95" y="35" 
+          font-family="'Inter', sans-serif" 
+          font-size="18" 
+          font-weight="300" 
+          letter-spacing="1.5"
+          fill="#FFFFFF">ESCROW</text>
+  </g>
+  
+  <!-- Subtle underline accent -->
+  <path d="M50,42 Q110,46 170,42" 
+        stroke="url(#goldGradient)" 
+        stroke-width="0.5" 
+        fill="none" 
+        opacity="0.6"/>
+  
+  <!-- Luxury corner accent -->
+  <path d="M45,20 L50,20 L50,25" 
+        stroke="url(#goldGradient)" 
+        stroke-width="0.75" 
+        fill="none"/>
+  <path d="M170,20 L165,20 L165,25" 
+        stroke="url(#goldGradient)" 
+        stroke-width="0.75" 
+        fill="none"/>
+  <path d="M45,40 L50,40 L50,35" 
+        stroke="url(#goldGradient)" 
+        stroke-width="0.75" 
+        fill="none"/>
+  <path d="M170,40 L165,40 L165,35" 
+        stroke="url(#goldGradient)" 
+        stroke-width="0.75" 
+        fill="none"/>
+</svg>

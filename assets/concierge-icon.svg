@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gold gradient definition -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D675"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA8C2C"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Concierge bell icon -->
+  <g transform="translate(10, 10)">
+    <!-- Bell base -->
+    <path d="M20 40C24.4183 40 28 36.4183 28 32H12C12 36.4183 15.5817 40 20 40Z" fill="url(#goldGradient)"/>
+    
+    <!-- Bell body -->
+    <path d="M32 28H8C6.89543 28 6 27.1046 6 26C6 24.8954 6.89543 24 8 24C8 16.268 14.268 10 22 10C29.732 10 36 16.268 36 24C37.1046 24 38 24.8954 38 26C38 27.1046 37.1046 28 36 28H32Z" fill="url(#goldGradient)"/>
+    
+    <!-- Bell handle -->
+    <path d="M20 10V4" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
